@@ -481,26 +481,24 @@ type LinearClosedPNLContainer struct {
 }
 
 type LinearClosedPNLResult struct {
-	OrderID          string  `json:"order_id"`
-	OrderLinkID      string  `json:"order_link_id"`
-	Side             string  `json:"side"`
-	Symbol           string  `json:"symbol"`
-	ExecID           string  `json:"exec_id"`
-	Price            float64 `json:"price"`
-	OrderPrice       float64 `json:"order_price"`
-	OrderQty         float64 `json:"order_qty"`
-	OrderType        string  `json:"order_type"`
-	FeeRate          float64 `json:"fee_rate"`
-	ExecPrice        float64 `json:"exec_price"`
-	ExecType         string  `json:"exec_type"`
-	ExecQty          float64 `json:"exec_qty"`
-	ExecFee          float64 `json:"exec_fee"`
-	ExecValue        float64 `json:"exec_value"`
-	LeavesQty        float64 `json:"leaves_qty"`
-	ClosedSize       float64 `json:"closed_size"`
-	LastLiquidityInd string  `json:"last_liquidity_ind"`
-	TradeTime        int64   `json:"trade_time"`
-	TradeTimeMs      int64   `json:"trade_time_ms"`
+	ID            int     `json:"id"`
+	UserID        int     `json:"user_id"`
+	Symbol        string  `json:"symbol"`
+	OrderID       string  `json:"order_id"`
+	Side          string  `json:"side"`
+	Qty           float64 `json:"qty"`
+	OrderPrice    int     `json:"order_price"`
+	OrderType     string  `json:"order_type"`
+	ExecType      string  `json:"exec_type"`
+	ClosedSize    float64 `json:"closed_size"`
+	CumEntryValue float64 `json:"cum_entry_value"`
+	AvgEntryPrice float64 `json:"avg_entry_price"`
+	CumExitValue  float64 `json:"cum_exit_value"`
+	AvgExitPrice  float64 `json:"avg_exit_price"`
+	ClosedPnl     float64 `json:"closed_pnl"`
+	FillCount     int     `json:"fill_count"`
+	Leverage      int     `json:"leverage"`
+	CreatedAt     int     `json:"created_at"`
 }
 
 type LinearClosedPNLParam struct {
