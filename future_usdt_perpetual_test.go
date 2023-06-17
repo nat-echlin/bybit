@@ -899,3 +899,20 @@ func TestLinearTradingStop(t *testing.T) {
 		assert.Error(t, err)
 	})
 }
+
+func TestLinearClosedPNL(t *testing.T) {
+	// BYBIT_API_KEY = oqdJet57VVaKnmcpuV
+	// BYBIT_API_SECRET = kUSm5WCFBm2lR62niZmEIThkM0AWlvsKHnaM
+
+	cli := NewTestClient().WithAuth("oqdJet57VVaKnmcpuV", "kUSm5WCFBm2lR62niZmEIThkM0AWlvsKHnaM")
+
+	req := LinearClosedPNLParam{
+		Symbol: "BTCUSDT",
+	}
+	res, err := cli.Future().USDTPerpetual().LinearClosedPNL(req)
+
+	t.Log(res)
+	t.Log(err)
+
+	t.Fail()
+}
