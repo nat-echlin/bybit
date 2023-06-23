@@ -262,6 +262,8 @@ type ListLinearPositionResult struct {
 	DeleverageIndicator int          `json:"deleverage_indicator"`
 	UnrealisedPnl       float64      `json:"unrealised_pnl"`
 	RiskID              int          `json:"risk_id"`
+	TakeProfit          float64      `json:"take_profit"`
+	StopLoss            float64      `json:"stop_loss"`
 }
 
 // ListLinearPosition :

@@ -247,7 +247,7 @@ func (s *V5OrderService) GetOpenOrders(param V5GetOpenOrdersParam) (*V5GetOpenOr
 	var res V5GetOpenOrdersResponse
 
 	if param.Category == "" {
-		return nil, fmt.Errorf("Category needed")
+		return nil, fmt.Errorf("category needed")
 	}
 
 	queryString, err := query.Values(param)

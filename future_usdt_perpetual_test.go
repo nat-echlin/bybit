@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/hirokisan/bybit/v2/testhelper"
+	"github.com/nat-echlin/bybit/testhelper"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -906,8 +906,10 @@ func TestLinearClosedPNL(t *testing.T) {
 
 	cli := NewTestClient().WithAuth("oqdJet57VVaKnmcpuV", "kUSm5WCFBm2lR62niZmEIThkM0AWlvsKHnaM")
 
+	StartTime := 1687024347
 	req := LinearClosedPNLParam{
-		Symbol: "BTCUSDT",
+		Symbol:    "BTCUSDT",
+		StartTime: &StartTime,
 	}
 	res, err := cli.Future().USDTPerpetual().LinearClosedPNL(req)
 
