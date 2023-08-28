@@ -489,7 +489,7 @@ type LinearClosedPNLResult struct {
 	OrderID       string  `json:"order_id"`
 	Side          string  `json:"side"`
 	Qty           float64 `json:"qty"`
-	OrderPrice    int     `json:"order_price"`
+	OrderPrice    float64 `json:"order_price"`
 	OrderType     string  `json:"order_type"`
 	ExecType      string  `json:"exec_type"`
 	ClosedSize    float64 `json:"closed_size"`
@@ -498,8 +498,8 @@ type LinearClosedPNLResult struct {
 	CumExitValue  float64 `json:"cum_exit_value"`
 	AvgExitPrice  float64 `json:"avg_exit_price"`
 	ClosedPnl     float64 `json:"closed_pnl"`
-	FillCount     int     `json:"fill_count"`
-	Leverage      int     `json:"leverage"`
+	FillCount     float64 `json:"fill_count"`
+	Leverage      float64 `json:"leverage"`
 	CreatedAt     int     `json:"created_at"`
 }
 
